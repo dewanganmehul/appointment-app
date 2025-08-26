@@ -1,9 +1,39 @@
 import React from 'react'
+import { Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import Doctors from './pages/Doctors'
+import Login from './pages/Login'
+import Contact from './pages/Contact'
+import MyAppointments from './pages/MyAppointments'
+import Appointment from './pages/Appointment'
+import Navbar from './components/navBar'
+import MyProfile from './pages/MyProfile'
+import Header from './components/Header'
+import Speciality from './components/Speciality'
+import Topdocs from './components/Topdocs'
 
 const App = () => {
+
   return (
-    <div>
-      <h1 className='text-green-500'>testing has started</h1>
+    <div className='mx-4 sm:mx-[10%]'>
+     <Navbar/>
+     <Header/>
+     <Speciality/>
+     <Topdocs/>
+      <Routes>
+        <Route path='/' element= {<Home/>}/>
+        <Route path='/doctors' element={<Doctors/>} />
+         <Route path='/doctors' element={<Doctors/>} />
+          <Route path='/doctors/:speciality' element={<Doctors/>} />
+           <Route path='/login' element={<Login/>} />
+          <Route path='/contact' element={<Contact/>} />   
+          <Route path='/myprofile' element={<MyProfile/>} />
+          <Route path='/myappointments' element={<MyAppointments/>} />
+          <Route path='/appointment/:docId' element={<Appointment/>} />
+
+           
+      </Routes>
+      
     </div>
   
   )
