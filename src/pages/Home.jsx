@@ -1,8 +1,19 @@
 import React from 'react'
+import Header from '../components/Header'
+import Speciality from '../components/Speciality'
+import Topdocs from '../components/Topdocs'
+import Banner from '../components/Banner'
+
 
 const Home = () => {
   return (
-    <div>Home is where ever i am with uo</div>
+    <div>
+      <Header/>
+      <Topdocs/>
+      <Speciality/>
+      <Banner/>
+    
+    </div>
   )
 }
 

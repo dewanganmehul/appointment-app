@@ -11,15 +11,15 @@ import MyProfile from './pages/MyProfile'
 import Header from './components/Header'
 import Speciality from './components/Speciality'
 import Topdocs from './components/Topdocs'
+import Footer from './components/Footer'
+import About from './pages/About'
 
 const App = () => {
 
   return (
     <div className='mx-4 sm:mx-[10%]'>
      <Navbar/>
-     <Header/>
-     <Speciality/>
-     <Topdocs/>
+  
       <Routes>
         <Route path='/' element= {<Home/>}/>
         <Route path='/doctors' element={<Doctors/>} />
@@ -30,9 +30,13 @@ const App = () => {
           <Route path='/myprofile' element={<MyProfile/>} />
           <Route path='/myappointments' element={<MyAppointments/>} />
           <Route path='/appointment/:docId' element={<Appointment/>} />
+          <Route path='/about' element={<About/>} />
+            <Route path='/contact' element={<Contact/>} />
+             <Route path='/myprofile' element={<MyProfile/>} />
 
            
       </Routes>
+      <Footer/>
       
     </div>
   
